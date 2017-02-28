@@ -1,2 +1,8 @@
 <link rel='stylesheet' href='css/style.css'><img class='pasta-pic' src ='http://www.pasta-recipes.co/files2/term_desc/conchiglie.jpg'>
-<h1> My name is <%= @name %> </h1>
+<% if @name %>
+<h1>My name is <%= @name %></h1>
+<% end %>
+<form action = "/named-pasta" method="post">
+ <input type="text" name="name">
+ <input type="submit" value="Submit">
+</form>
